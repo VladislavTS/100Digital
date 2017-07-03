@@ -1,0 +1,294 @@
+@import "jquery-ui.css";
+
+@import "fonts.css";
+@import "menu.css";
+@import "footer.css";
+@import "a.css";
+@import "rating-list.css";
+@import "send-form.css";
+@import "method.css";
+
+*{
+	margin: 0;
+	padding: 0;
+
+	font-family: 'sf-display-regular', serif;
+	color: #313131;
+
+	text-decoration: none;
+	list-style-type: none;
+
+	border: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 300;
+}
+p{
+	font-weight: 100;
+}
+
+*[page]{
+	margin: 120px auto;
+}
+
+.clear{
+	clear: both;
+}
+
+
+
+/* ... */
+
+
+
+*[page="index"] .container{
+	position: relative;
+}
+
+*[page="index"] .left-container{
+	min-height: 100px;
+	padding-top: 42px;
+}
+
+	/* page-name */
+	*[page="index"] .left-container .page-name{
+		font-size: 30px;
+		letter-spacing: 0.035em;
+		margin-bottom: 0;
+	}
+
+	/* page-slogan */
+	*[page="index"] .left-container .page-slogan{
+		font-size: 30px;
+		margin-top: -10px;
+	}
+		*[page="index"] .left-container .page-slogan b{
+			font-size: 68px;
+			letter-spacing: 0.09em;
+			color: #506ef2;
+		}
+
+*[page="index"] .right-container{
+	min-height: 100px;
+}
+
+	/* advertise-container */
+	*[page="index"] .right-container .advertise-container{
+		width: 100%;
+		height: 330px;
+
+		position: relative;
+
+		overflow: hidden;
+		border: 1px solid #dadada;
+	}
+		*[page="index"] .right-container .advertise-container img{
+			width: 100%;
+			height: auto;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			z-index: 9;
+
+			margin: auto auto;
+		}
+
+		/* module-title */
+		*[page="index"] .right-container .advertise-container .module-title{
+			font-size: 12px;
+			text-transform: lowercase;
+
+			transform: rotate(-90deg);
+
+			position: absolute;
+			left: -5px;
+			bottom: 30px;
+
+			z-index: 10;
+		}
+
+	/* filters-container */
+	*[page="index"] .right-container .filters-container{
+		width: 100%;
+		height: 510px;
+
+		margin-top: 10px;
+		padding: 0 15px;
+
+		border: 1px solid #dadada;
+	}
+
+		/* block-name */
+		*[page="index"] .right-container .filters-container .block-name{
+			font-size: 14px;
+			font-family: "sf-text-semibold";
+
+			margin: 25px 0 20px 0;
+		}
+
+		/* filter */
+		*[page="index"] .right-container .filters-container [filter]{
+			margin-bottom: 45px;
+		}
+
+			/* select */
+			*[page="index"] .right-container .filters-container [filter] select{
+				width: 100%;
+				height: 40px;
+
+				font-size: 12px;
+				font-family: "sf-text-italic";
+				color: #506ef2;
+
+				padding-left: 10px;
+
+				border-radius: 3px;
+				border: 1px solid #dadada;
+				background: #fff;
+			}
+
+			/* input. text */
+			*[page="index"] .right-container .filters-container [filter] input[type="text"]{
+				width: 100%;
+				height: 40px;
+
+				font-size: 12px;
+				font-family: "sf-text-italic";
+				color: #506ef2;
+
+				padding-left: 10px;
+
+				border-radius: 3px;
+				border: 1px solid #dadada;
+				background: #fff;
+			}
+				*[page="index"] .right-container .filters-container [filter] input[type="text"]::-webkit-input-placeholder{color:#dadada;}
+				*[page="index"] .right-container .filters-container [filter] input[type="text"]::-moz-placeholder{color:#dadada;}
+				*[page="index"] .right-container .filters-container [filter] input[type="text"]:-moz-placeholder{color:#dadada;}
+				*[page="index"] .right-container .filters-container [filter] input[type="text"]:-ms-input-placeholder{color:#dadada;}
+
+			/* filter. raitings */
+			*[page="index"] .right-container .filters-container [filter="raitings"]{
+			}
+				/* li */
+				*[page="index"] .right-container .filters-container [filter="raitings"] li{
+					height: 20px;
+
+					display: flex;
+					margin-bottom: 10px;
+				}
+
+					/* checkbox */
+					*[page="index"] .right-container .filters-container [filter="raitings"] li input[type="checkbox"]{
+						display: none;
+					}
+						/* checkbox-button */
+						*[page="index"] .right-container .filters-container [filter="raitings"] li [checkbox]{
+							width: 20px;
+							height: 20px;
+
+							margin-right: 20px;
+
+							cursor: pointer;
+							border-radius: 3px;
+							border: 1px solid #666;
+						}
+							*[page="index"] .right-container .filters-container [filter="raitings"] li [checkbox="yes"]{
+								background: url("../img/check-white.svg") center center no-repeat;
+								background-size: 80% 75%;
+								background-color: #506ef2;
+							}
+
+					/* filter-title */
+					*[page="index"] .right-container .filters-container ul li .filter-title{
+						font-size: 12px;
+						font-family: "sf-text-medium";
+					}
+
+			/* filter. price */
+			*[page="index"] .right-container .filters-container [filter="price"] .price{
+				display: none;
+			}
+
+				/* slider-container */
+				*[page="index"] .right-container .filters-container [filter="price"] .slider-container{
+					margin-top: 15px;
+				}
+
+	/* button. filter */
+	*[page="index"] .right-container [button="filter"]{
+		width: 100%;
+		height: 50px;
+
+		font-size: 14px;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 50px;
+		vertical-align: middle;
+		color: #fff;
+
+		margin-top: 25px;
+
+		transition: 0.2s;
+
+		cursor: pointer;
+		background: #506ef2;
+	}
+		*[page="index"] .right-container [button="filter"]:hover{
+			opacity: 0.75;
+		}
+
+
+
+/*** SIZES ***/
+
+@media (max-width: 1000px){
+	*[page="index"] .left-container{
+		width: 100%;
+	}
+
+	*[page="index"] .right-container{
+		width: calc(100% - 30px);
+		max-width: 940px;
+		height: auto;
+
+		position: absolute;
+		top: 260px;
+	}
+
+		*[page="index"] .right-container .advertise-container img{
+			width: auto;
+			height: 100%;
+		}
+}
+
+@media (max-width: 740px){
+	/* page-name */
+	*[page="index"] .left-container .page-name{
+		font-size: 22px;
+		letter-spacing: 0.035em;
+		margin-bottom: 0;
+	}
+
+	/* page-slogan */
+	*[page="index"] .left-container .page-slogan{
+		font-size: 22px;
+		margin-top: -15px;
+	}
+		*[page="index"] .left-container .page-slogan b{
+			font-size: 60px;
+			letter-spacing: 0.09em;
+			color: #506ef2;
+		}
+}

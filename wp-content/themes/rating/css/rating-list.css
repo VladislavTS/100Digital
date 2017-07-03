@@ -1,0 +1,183 @@
+/* advertising */
+*[advertising]{
+	display: none;
+}
+
+.rating-list [studio] [info="ratings"]{
+	display: none;
+}
+
+.rating-list{
+	font-family: "sf-text-regular";
+
+	margin-top: 70px;
+	padding-right: 15px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+	/* grey */
+	.rating-list [info].grey{
+		font-size: 12px !important;
+		color: #b9b9b9;
+	}
+
+	/* row */
+	.rating-list .row{
+		height: 80px;
+	}
+		.rating-list .row:nth-child(even){
+			background: #efefef;
+		}
+
+		/* col */
+		.rating-list [col]{
+			height: 100%;
+			display: flex;
+		}
+
+			/* col. check */
+			.rating-list [col="check"] .grey{
+				width: 100%;
+				text-align: center;
+			}
+
+			/* num > img */
+			.rating-list [col="num"] img{
+				width: 15px;
+				height: 15px;
+			}
+
+			/* info */
+			.rating-list [col] [info]{
+				font-size: 13px;
+				margin: auto 0;
+			}
+				/* h2 */
+				.rating-list [col] [info] h2{
+					font-size: 13px;
+					font-family: "sf-text-semibold";
+				}
+
+				/* info. title */
+				.rating-list [col] [info="title"]{
+					padding-right: 5px;
+				}
+				/* info. city */
+				.rating-list [col] [info="city"]{
+					padding-right: 5px;
+				}
+
+				/* checkbox-container */
+				.rating-list [col] [info="checkbox"]{
+					width: 100%;
+				}
+
+				/* checkbox */
+				.rating-list [col] [info] input[type="checkbox"]{
+					display: none;
+				}
+					.rating-list [col] [info] [checkbox]{
+						width: 20px;
+						height: 20px;
+
+						margin: 0 auto;
+
+						cursor: pointer;
+						border-radius: 3px;
+						border: 1px solid #666;
+						background: #fff;
+					}
+						.rating-list [col] [info] [checkbox="yes"]{
+							background: url("../img/check-white.svg") center center no-repeat;
+							background-size: 80% 75%;
+							background-color: #506ef2;
+						}
+
+
+				/* num */
+				.rating-list [col="num"] [info]{
+					margin: auto;
+				}
+
+				/* hour */
+				.rating-list [col] [info="hour"]{
+					display: none;
+				}
+				/* price */
+				.rating-list [col] [info="price"]{
+					display: none;
+				}
+
+				/* apps */
+				.rating-list [col] [info="apps"]{
+					width: 100%;
+					text-align: center;
+				}
+
+
+
+/*** SIZES ***/
+
+@media (max-width: 1000px){
+	.rating-list{
+		padding-right: 0;
+		margin-top: 1000px;
+	}
+}
+
+@media (max-width: 740px){
+	.rating-list{
+		margin-top: 1025px;
+	}
+
+	/* col */
+	.rating-list [col]{
+		width: 25%;
+	}
+
+	/* col. city */
+	.rating-list [col="city"]{
+		display: none;
+	}
+	/* col. hour */
+	.rating-list [col="hour"]{
+		display: none;
+	}
+	/* col. apps */
+	.rating-list [col="apps"]{
+		display: none;
+	}
+
+	/* col.num */
+	.rating-list [col="num"]{
+		width: 15%;
+		text-align: center;
+	}
+	/* col.title */
+	.rating-list [col="title"]{
+		width: 40%;
+	}
+	/* col.check */
+	.rating-list [col="check"]{
+		width: 20%;
+	}
+
+		/* info */
+		.rating-list [col] [info]{
+			width: 100%;
+			font-size: 10px;
+		}
+			/* h2 */
+			.rating-list [col] [info] h2{
+				font-size: 10px;
+				padding-right: 5px;
+			}
+
+			/* grey */
+			.rating-list [info].grey{
+				font-size: 10px !important;
+				word-break: break-all;
+			}
+}

@@ -1,0 +1,99 @@
+*[page="advertising"] .page-name{
+	font-size: 30px;
+	letter-spacing: 0.035em;
+
+	margin-top: 60px;
+}
+	*[page="advertising"] .page-name b{
+		font-size: 68px;
+		letter-spacing: 0.09em;
+		color: #506ef2;
+	}
+
+	/* page-slogan */
+	*[page="advertising"] .page-slogan{
+		font-size: 30px;
+		margin-top: -30px;
+	}
+		*[page="advertising"] .page-slogan b{
+			font-size: 68px;
+			letter-spacing: 0.09em;
+			color: #506ef2;
+		}
+
+/* price-list */
+*[page="advertising"] .price-list{
+	font-family: "sf-text-regular";
+
+	margin-top: 70px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+	*[page="advertising"] .price-list .info.grey{
+		font-size: 12px !important;
+		color: #b9b9b9;
+	}
+
+	/* row */
+	*[page="advertising"] .price-list .row{
+		height: 80px;
+	}
+		*[page="advertising"] .price-list .row:nth-child(even){
+			background: #efefef;
+		}
+
+		/* col */
+		*[page="advertising"] .price-list .col{
+			height: 100%;
+			display: flex;
+		}
+
+			/* info */
+			*[page="advertising"] .price-list .col .info{
+				font-size: 13px;
+				margin: auto 0;
+			}
+				/* month */
+				*[page="advertising"] .price-list .col .info.month{
+					padding-left: 25px;
+				}
+
+/* message-container */
+*[page="advertising"] .message-container{
+	font-size: 13px;
+	text-align: center;
+
+	padding: 0 25px;
+	margin-top: 50px;
+}
+
+@media (max-width: 740px){
+	*[page="advertising"] .page-name{
+		font-size: 24px;
+	}
+		/* page-slogan */
+		*[page="advertising"] .page-slogan{
+			font-size: 24px;
+		}
+			*[page="advertising"] .page-slogan b{
+				font-size: 62px;
+			}
+
+	/* price-list */
+	*[page="advertising"] .price-list{
+		margin-top: 40px;
+	}
+
+	*[page="advertising"] .price-list .info.grey{
+		font-size: 10px !important;
+		word-break: break-all;
+	}
+
+	/* info */
+	*[page="advertising"] .price-list .col .info{
+		font-size: 10px;
+		word-break: break-all;
+	}
+}

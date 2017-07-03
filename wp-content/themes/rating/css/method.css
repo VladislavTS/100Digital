@@ -1,0 +1,43 @@
+*[page="method"]{
+	margin-top: 145px !important;
+}
+
+	*[page="method"] h3{
+		font-size: 30px;
+		letter-spacing: 0.035em;
+
+		margin: 15px 0 10px 0;
+	}
+
+	*[page="method"] p{
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	/* formula */
+	*[page="method"] .formula{
+		margin-top: 25px;
+	}
+		/* sub */
+		*[page="method"] .formula sub{
+			font-style: italic;
+		}
+
+		/* margin */
+		*[page="method"] .formula .margin{
+			margin-left: -14px;
+		}
+
+@media (max-width: 740px){
+	*[page="method"] h3{
+		font-size: 25px;
+		letter-spacing: 0.035em;
+
+		margin: 15px 0 10px 0;
+	}
+
+	*[page="method"] p{
+		font-size: 15px;
+		margin-bottom: 25px;
+	}
+}

@@ -1,0 +1,210 @@
+nav.menu{
+	width: 100%;
+	height: 110px;
+
+	position: fixed;
+	top: 0;
+
+	z-index: 9999;
+
+	border-bottom: 1px solid #dadada;
+	box-shadow: 0 1px 12px 0 rgba(0,0,0, 0.16);
+	background: #fff;
+}
+
+	/* menu-icon */
+	nav.menu .menu-icon{
+		width: 110px;
+		height: 110px;
+
+		position: fixed;
+		top: 0;
+		right: 0;
+
+		display: none;
+
+		transition: 0.2s;
+
+		cursor: pointer;
+		background: url("../img/menu-black.png") no-repeat center center;
+		background-size: 25%;
+		background-color: #fff;
+	}
+		nav.menu .menu-icon:hover{
+			opacity: 0.75px;
+		}
+		/* active */
+		nav.menu .menu-icon.active{
+			right: 350px;
+			background: url("../img/menu-white.png") no-repeat center center;
+			background-size: 25%;
+			background-color: #506ef2;
+		}
+
+	nav.menu .container{
+		height: 100%;
+	}
+
+	nav.menu .container a{
+		text-decoration: none;
+	}
+
+	/* flex-container */
+	nav.menu .flex-container{
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+	}
+
+		/* logo-container */
+		nav.menu .flex-container .logo-container{
+			width: 200px;
+			height: 48px;
+
+			margin: auto 0;
+		}
+			/* logo */
+			nav.menu .flex-container .logo-container .logo{
+				height: 100%;
+			}
+
+		/* hrefs-container */
+		nav.menu .flex-container .hrefs-container{
+			height: 100%;
+			margin-left: auto;
+		}
+
+			/* href */
+			nav.menu .flex-container .hrefs-container .href{
+				font-size: 12px;
+				letter-spacing: 0.07em;
+				color: #000;
+
+				margin: auto 0 auto 47px;
+			}
+
+			/* bottom */
+			nav.menu .flex-container .hrefs-container .bottom{
+				width: 243px;
+				height: 47px;
+
+				letter-spacing: 0.01em;
+
+				margin-left: 0;
+				margin-right: 28px;
+
+				display: flex;
+
+				transition: 0.2s;
+
+				border: 2px solid #506ef2;
+			}
+				nav.menu .flex-container .hrefs-container .bottom:hover{
+					background: #506ef2;
+				}
+
+				/* grey */
+				nav.menu .flex-container .hrefs-container .bottom.grey{
+					opacity: 0.5;
+				}
+
+				/* margin */
+				nav.menu .flex-container .hrefs-container .margin{
+					width: 247px;
+					margin-right: 21px;
+				}
+					nav.menu .flex-container .hrefs-container .bottom.blue .text{
+						color: #fff;
+					}
+				/* active */
+				nav.menu .flex-container .hrefs-container .bottom.active{
+					background: #506ef2;
+				}
+					nav.menu .flex-container .hrefs-container .bottom.active .text{
+						color: #fff;
+					}
+				/* hover */
+				nav.menu .flex-container .hrefs-container .bottom:hover .text{
+					color: #fff;
+				}
+
+				/* text */
+				nav.menu .flex-container .hrefs-container .bottom .text{
+					margin: auto auto;
+				}
+
+
+
+/*** SIZES ***/
+
+@media (max-width: 1000px){
+	/* menu-icon */
+	nav.menu .menu-icon{
+		display: block;
+	}
+
+	/* hrefs-container */
+	nav.menu .flex-container .hrefs-container{
+		width: 350px;
+		height: 100%;
+		min-height: 110px;
+
+		position: fixed;
+		top: 0;
+		right: -740px;
+
+		border: 0;
+		border-left: 1px solid #506ef2;
+		background: #fff;
+	}
+
+		/* flex-container */
+		nav.menu .flex-container .hrefs-container .flex-container{
+			display: block;
+		}
+
+			/* href */
+			nav.menu .flex-container .hrefs-container .href{
+				width: 100%;
+				height: 55px;
+
+				margin: 0;
+
+				display: block;
+				text-align: center;
+			}
+				/* text */
+				nav.menu .flex-container .hrefs-container .href .text{
+					height: 100%;
+					line-height: 55px;
+					vertical-align: middle;
+				}
+
+			/* bottom */
+			nav.menu .flex-container .hrefs-container .bottom{
+				border: 0;
+			}
+}
+
+@media (max-width: 740px){
+	/* hrefs-container */
+	nav.menu .flex-container .hrefs-container{
+		width: calc(100% - 110px);
+		height: 100%;
+
+		border: 0;
+		border-left: 1px solid #506ef2;
+	}
+
+		/* href */
+		nav.menu .flex-container .hrefs-container .href{
+			font-size: 10px;
+		}
+
+		/* menu-icon. active */
+		nav.menu .menu-icon.active{
+			left: 0;
+			right: auto;
+		}
+}
